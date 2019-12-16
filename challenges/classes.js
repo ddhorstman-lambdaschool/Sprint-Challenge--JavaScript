@@ -23,8 +23,23 @@ let cuboid2 = new CuboidMaker2(4,5,5);
 
 class CubeMaker extends CuboidMaker2{
     constructor(side){
+        super();
         this.length=side;
         this.height=side;
         this.width=side;
     }
+    //The volume() and surfaceArea() methods in CuboidMaker work the same way for cubes.
+    //This is what cube-specific methods would look like:
+    /*
+    volume(){
+        return this.side*this.side*this.side;
+    }
+    surfaceArea(){
+        return 6 * this.side * this.side;
+    }
+    */ 
 }
+let cube = new CubeMaker(7);
+console.log(cube.volume());
+console.log(cube.surfaceArea());
+
